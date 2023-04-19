@@ -1,0 +1,128 @@
+/* 
+    font-family: 'Fira Code', monospace;
+    font-family: 'Fira Sans', sans-serif; 
+*/
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    text-emphasis-style: none;
+}
+
+.development-notice{
+    display: flex;
+    /* uncomment below line to show maintenance notice */
+    /* display: none; */
+    align-items: center;
+    width: fit-content;
+    margin: 2vh auto;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: larger;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.container{
+    display: flex;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(204, 197, 197, 0.862);
+    width: 15vw;
+    height: 100vh;
+    font-family: 'Fira Code', monospace;
+    font-weight: 300;
+}
+
+.sidebar nav{
+    padding: 20px;
+}
+
+.sidebar nav li{
+    font-size: larger;
+    list-style: none;
+    padding: 50px 0;
+}
+
+.nav-link{
+    color: black;
+}
+
+.nav-link:hover{
+    font-weight: bold;
+    color: rgb(76, 140, 166);
+}
+
+.main{
+    width: 85vw;
+    font-weight: 400;
+}
+
+.intro{
+    margin: 10vh auto;
+    height: 70vh;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.headline{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.greeting{
+    font-family: 'Fira Code', monospace;
+    font-size: 40px;
+}
+
+.name{
+    font-family: 'Fira Sans', sans-serif; 
+    font-size: 190px;
+    color: rgb(18, 104, 138);
+}
+
+.profession{
+    font-family: 'Fira Sans', sans-serif; 
+    font-size: 60px;
+    color: rgba(157, 123, 13, 0.706);
+}
+
+.profession .iam {
+    font-family: 'Fira Code', monospace;
+    font-size: 25px;
+    color: black;
+}
+
+.buttons{
+    margin-top: 20px;
+}
+
+.buttons button {
+    margin: 10px;
+    padding: 15px;
+    background-color: rgba(207, 218, 150, 0.909);
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Fira Code', monospace;;
+}
+
+.photo{
+    margin: auto;
+}
+
+.photo img{
+    height: 50vh;
+    opacity: 0.9;
+}
