@@ -112,10 +112,15 @@ a{
     margin: 10px;
     padding: 15px;
     background-color: rgba(207, 218, 150, 0.909);
+    color: rgb(74, 15, 15);
     border-radius: 30px;
     cursor: pointer;
     font-size: 15px;
     font-family: 'Fira Code', monospace;;
+}
+
+.buttons button:hover{
+    font-weight: bold;
 }
 
 .photo{
