@@ -38,6 +38,10 @@ section {
 
 }
 
+p, h1, h2, h3, h4, h5, h6 {
+    cursor: default;
+}
+
 .header{
     position: fixed;
     top: 0;
@@ -82,15 +86,15 @@ section {
     align-items: center;
 }
 
-.home-img img {
+.home-img img{
     background: var(--main-color);
     margin-left: 4rem;
-    border-bottom: .1rem solid var(--main-color);
+    border: .5rem solid var(--main-color);
     border-top-right-radius: 50%;
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%; 
     box-shadow: 0 0 2rem var(--main-color);
-    width: 30vw;
+    width: 35vw;
 }
 
 .home-content h3 {
@@ -155,4 +159,122 @@ section {
 
 .btn:hover {
     box-shadow: none;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    background: var(--secondary-bg-color);
+}
+
+.about-img img {
+    border: .5rem solid var(--main-color);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    box-shadow: 0 0 2rem var(--main-color);
+    width: 35vw;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.heading span {
+    color: var(--main-color);
+}
+
+.about-content h3 {
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.skills h2 {
+    margin-bottom: 5rem;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.skills-container .skills-box {
+    min-height: 65vh;
+    flex: 1 1 30rem;
+    background: var(--secondary-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+}
+
+.skills-container .skills-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.03);
+}
+
+.skills-box i {
+    margin-bottom: 2rem;
+    color: var(--main-color);
+    font-size: 7rem;
+}
+
+.skills-box h3 {
+    font-size: 2.6rem;
+}
+
+.skills-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--secondary-bg-color);
+}
+
+.footer-text p {
+    font-size: 1.6rem;
+}
+
+.footer-icon-top a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5 ease;
+}
+
+.footer-icon-top a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-icon-top a i {
+    font-size: 2.4rem;
+    color: var(--secondary-bg-color);
 }
