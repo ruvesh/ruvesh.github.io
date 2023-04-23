@@ -1,0 +1,163 @@
+@import "style.css";
+
+
+@media (max-width:1390px) {
+    html {
+        font-size: 65%;
+    }
+
+    .skills-container .skills-box {
+        padding-top: 5rem;
+        min-height: 73vh;
+    }
+}
+
+@media (max-width:1290px) {
+
+    .skills-container .skills-box {
+        min-height: 76vh;
+    }
+}
+
+@media (max-width:1200px) {
+    html {
+        font-size: 55%;
+    }
+
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+
+    .home-content h3 span {
+        font-size: 3.2rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .skills-container .skills-box {
+        min-height: 60vh;
+    }
+}
+
+@media (max-width:1120px) {
+    .skills-container .skills-box {
+        padding-top: 7rem;
+        min-height: 80vh;
+    }
+}
+
+@media (max-width:991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+
+    .home-content h3 span {
+        font-size: 3.2rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .skills {
+        padding-bottom: 7rem;
+    }
+}
+
+@media (max-width:768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+
+    .navbar.drop-down {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .home {
+        flex-direction: column;
+        
+    }
+
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+
+    .home-content h3 span {
+        font-size: 3.2rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+        border-radius: 50%;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+    }
+
+    .about-img img {
+        width:  70vw;
+        margin-top: 4rem;
+        border-radius: 50%;
+    }
+
+    .skills-container .skills-box {
+        min-height: 80vh;
+    }
+
+    .skills h2 {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width:450px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    .footer-text p {
+        font-size: 1rem;
+    }
+
+    .footer-icon-top a {
+        font-size: 1.8rem;
+    }
+}

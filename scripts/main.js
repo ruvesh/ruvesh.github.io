@@ -1,6 +1,13 @@
 window.onload = () => {
     navLinks = document.querySelectorAll('header nav a');
     sections = document.querySelectorAll('section');
+    menuIcon = document.querySelector('#menu-icon');
+    navBar = document.querySelector('.navbar');
+
+    menuIcon.addEventListener('click', () => {
+        menuIcon.classList.toggle('bx-x');
+        navBar.classList.toggle('drop-down');
+    });
 };
 
 window.onscroll = () => {
@@ -21,4 +28,7 @@ window.onscroll = () => {
             });
         };
     });
+
+    menuIcon.classList.remove('bx-x');
+    navBar.classList.remove('drop-down');
 };
