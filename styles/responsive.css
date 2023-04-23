@@ -125,7 +125,21 @@
     .home-img img {
         width: 70vw;
         margin-top: 4rem;
+        margin-left: 0;
         border-radius: 50%;
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-container {
+       display: flex;
+       width: 100%;
+       justify-content: center;
+       align-items: center;
     }
 
     .about {
@@ -145,6 +159,13 @@
     .skills h2 {
         margin-bottom: 3rem;
     }
+}
+
+@media (max-width:590px) {
+    .skills-container .skills-box {
+        min-height: 50vh;
+    }
+
 }
 
 @media (max-width:450px) {
