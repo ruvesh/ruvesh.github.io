@@ -253,39 +253,10 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .experience{
     background: var(--secondary-bg-color);
-}
-
-.experience-container{
-    margin: 5rem 20%;
     display: flex;
-    flex-direction: column-reverse;
-    gap: 10rem;
-}
-
-.experience-card {
-    display: flex;
-    align-items: center;
-    gap: 5rem;
-}
-
-.card-icon {
-    background: var(--bg-color);
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 8rem;
-    height: 8rem;
-    box-shadow: 0 0 2rem var(--main-color);
-    border-radius: 50%;
-}
-
-.experience-card i {
-    font-size: 2.6rem;
-}
-
-.company-details .employment-dates {
-    display: flex;
-    gap: 3rem;
 }
 
 .footer {

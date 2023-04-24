@@ -159,6 +159,35 @@
     .skills h2 {
         margin-bottom: 3rem;
     }
+
+    .timeline {
+       min-width: 90vw;
+    }
+
+    .card::before {
+        width: 80%;
+    }
+
+    .timeline {
+        display: flex;
+        justify-content: center;
+    }
+
+    .card {
+        min-width: 70vw;
+    }
+
+    .org {
+        font-size: 2.4rem;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .dates {
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width:590px) {
