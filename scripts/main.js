@@ -48,11 +48,11 @@ const performScrollAnimation = () => {
         reset: false,
         distance: '80px',
         duration: 2000,
-        delay: 200
+        delay: 100
     });
 
     ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-    ScrollReveal().reveal('.home-img, .skills-container', { origin: 'bottom' });
+    ScrollReveal().reveal('.home-img, .skills-container, .timeline', { origin: 'bottom' });
     ScrollReveal().reveal('.about-img, .home-content h1', { origin: 'left' });
     ScrollReveal().reveal('.about-content, .home-content p', { origin: 'right' });
 };
@@ -60,9 +60,9 @@ const performScrollAnimation = () => {
 const animateChronicle = () => {
     const typed = new Typed('#chronicle', {
         strings: ['techie', 'programmer', 'solutionist'],
-        startDelay: 900,
+        startDelay: 800,
         typeSpeed: 100,
-        backSpeed: 100,
+        backSpeed: 50,
         backDelay: 1000,
         loop: true
     });
