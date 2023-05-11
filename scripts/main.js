@@ -52,7 +52,7 @@ const performScrollAnimation = () => {
     });
 
     ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-    ScrollReveal().reveal('.home-img, .skills-container, .timeline, .display, .base, .stand', { origin: 'bottom' });
+    ScrollReveal().reveal('.home-img, .skills-container, .timeline', { origin: 'bottom' });
     ScrollReveal().reveal('.about-img, .home-content h1', { origin: 'left' });
     ScrollReveal().reveal('.about-content, .home-content p', { origin: 'right' });
 };

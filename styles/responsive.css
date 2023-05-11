@@ -195,29 +195,6 @@
         min-height: 50vh;
     }
 
-    .display {
-        width: 80vw;
-        height: 50vw;
-    }
-    
-    .stand {
-        width: 5vw;
-        height: 5vh;
-    }
-    
-    .base {
-        height: 1vh;
-        width: 40vw;
-    }
-
-    .carousel {
-        width: 100vw;
-        height: 30vh;
-    }
-
-    .carousel__slide h3 {
-        font-size: 1.8rem;
-    }
 }
 
 @media (max-width:450px) {
@@ -234,25 +211,4 @@
         font-size: 1.8rem;
     }
 
-}
-
-@media (max-width:400px) {
-    
-    .carousel__slide h3 {
-        font-size: 1.4rem;
-    }
-
-    .carousel__slide .social-media a {
-        width: 3rem;
-        height: 3rem;
-    }
-
-    .carousel__slide .social-media a i{
-        font-size: 1rem;
-    }
-
-    .carousel__indicator {
-        height: 10px;
-        width: 10px;
-    }
 }
