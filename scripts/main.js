@@ -51,10 +51,10 @@ const performScrollAnimation = () => {
         delay: 100
     });
 
-    ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-    ScrollReveal().reveal('.home-img, .skills-container, .timeline', { origin: 'bottom' });
-    ScrollReveal().reveal('.about-img, .home-content h1', { origin: 'left' });
-    ScrollReveal().reveal('.about-content, .home-content p', { origin: 'right' });
+    ScrollReveal().reveal('.home-img, .skills-container, .timeline, .contact form textarea', { origin: 'bottom' });
+    ScrollReveal().reveal('.about-img, .home-content h1, .contact form input:nth-child(odd)', { origin: 'left' });
+    ScrollReveal().reveal('.about-content, .home-content p, .contact form input:nth-child(even)', { origin: 'right' });
+    ScrollReveal().reveal('.home-content, .heading, .contact form .btn', { origin: 'top' });
 };
 
 const animateChronicle = () => {

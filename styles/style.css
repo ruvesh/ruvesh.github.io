@@ -259,11 +259,58 @@ p, h1, h2, h3, h4, h5, h6 {
     align-items: center;
 }
 
-.contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.contact h2{
+    margin-bottom: 5rem;
 }
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    margin: .7rem 0;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--secondary-bg-color);
+    border-radius: 1rem;
+}
+
+.contact form .input-box input{
+    width: 49%;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.contact form .btn {
+    cursor: pointer;
+    margin-top: 4rem;
+}
+
+/* Remove number field arrows */
+/* Chrome, Safari, Edge, Opera */
+.contact form .input-box input::-webkit-outer-spin-button,
+.contact form .input-box input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+/* .contact form .input-box input[type=number] {
+  -moz-appearance: textfield;
+} */
 
 .footer {
     display: flex;
