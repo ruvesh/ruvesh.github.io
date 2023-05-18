@@ -300,18 +300,6 @@ p, h1, h2, h3, h4, h5, h6 {
     margin-top: 4rem;
 }
 
-/* Remove number field arrows */
-/* Chrome, Safari, Edge, Opera */
-.contact form .input-box input::-webkit-outer-spin-button,
-.contact form .input-box input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-/* Firefox */
-/* .contact form .input-box input[type=number] {
-  -moz-appearance: textfield;
-} */
-
 .footer {
     display: flex;
     justify-content: space-between;
