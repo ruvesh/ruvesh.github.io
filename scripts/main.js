@@ -3,6 +3,8 @@ window.onload = () => {
     sections = document.querySelectorAll('section');
     menuIcon = document.querySelector('#menu-icon');
     navBar = document.querySelector('.navbar');
+    nameInput = document.getElementById('name');
+    phoneInput = document.getElementById('phone');
 
     // show or hide nav menu for small screen size on click of sandwich menu icon
     menuIcon.addEventListener('click', () => {
@@ -10,14 +12,32 @@ window.onload = () => {
         navBar.classList.toggle('drop-down');
     });
 
+    phoneInput.addEventListener('change', (event) => {
+        const input = event.target;
+        if (input.validity.patternMismatch) {
+            input.setCustomValidity("Please enter a valid 10 digit mobile number");
+        } else {
+            input.setCustomValidity("");
+        }
+    }, false);
+
+    nameInput.addEventListener('change', (event) => {
+        const input = event.target;
+        let inputVal = input.value.trim().replace(/\s\s+/g, ' ');
+        input.value.split('').forEach((ch) => {
+            if(!isAllowedChar(ch.charCodeAt(0))){
+                inputVal = inputVal.replace(ch, '');
+            }
+        });
+
+        input.value = inputVal;
+    });
+
     addSiteAnimation();
 };
 
 // set active nav item based on currently scrolled section of site
 window.addEventListener('scroll', () => {
-    console.log('scrolling');
-    console.log(sections);
-    console.log(navLinks);
     sections.forEach(section => {
         let top = window.scrollY;
         let offset = section.offsetTop - 150;
@@ -66,4 +86,17 @@ const animateChronicle = () => {
         backDelay: 1000,
         loop: true
     });
+}
+
+const blockSpecialCharacters = (e) => {
+    let key = e.key;
+    let keyCharCode = key.charCodeAt(0);
+
+    return isAllowedChar(keyCharCode);
+}
+
+const isAllowedChar = (ch) => {
+    return (ch >= 65 && ch <= 90)
+        || (ch >= 97 && ch <= 122)
+        || ch == 32;
 }
