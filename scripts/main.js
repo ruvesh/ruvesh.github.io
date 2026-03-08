@@ -7,28 +7,32 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    const header    = document.getElementById('header');
-    const navbar    = document.getElementById('navbar');
-    const navToggle = document.getElementById('nav-toggle');
-    const navLinks  = document.querySelectorAll('.nav-link');
-    const sections  = document.querySelectorAll('section');
-    const reveals   = document.querySelectorAll('.reveal');
+    const header     = document.getElementById('header');
+    const navbar     = document.getElementById('navbar');
+    const navToggle  = document.getElementById('nav-toggle');
+    const navOverlay = document.getElementById('nav-overlay');
+    const navLinks   = document.querySelectorAll('.nav-link');
+    const sections   = document.querySelectorAll('section');
+    const reveals    = document.querySelectorAll('.reveal');
     const phoneInput = document.getElementById('phone');
     const nameInput  = document.getElementById('name');
+
+    const closeNav = () => {
+        navbar.classList.remove('open');
+        navOverlay.classList.remove('open');
+        navToggle.querySelector('i').className = 'bx bx-menu';
+    };
 
     // ─── Mobile Nav Toggle ───────────────────────────────
     navToggle.addEventListener('click', () => {
         const isOpen = navbar.classList.toggle('open');
+        navOverlay.classList.toggle('open', isOpen);
         navToggle.querySelector('i').className = isOpen ? 'bx bx-x' : 'bx bx-menu';
     });
 
-    // Close mobile nav when a link is clicked
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navbar.classList.remove('open');
-            navToggle.querySelector('i').className = 'bx bx-menu';
-        });
-    });
+    // Close mobile nav when overlay or a link is clicked
+    navOverlay.addEventListener('click', closeNav);
+    navLinks.forEach(link => link.addEventListener('click', closeNav));
 
     // ─── Scroll: Header background ──────────────────────
     window.addEventListener('scroll', () => {
