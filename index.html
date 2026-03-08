@@ -5,177 +5,253 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>V Ruvesh - Software Engineer</title>
+    <title>V Ruvesh — Senior Software Engineer</title>
+    <meta name="description"
+        content="Portfolio of V Ruvesh — Experienced Software Engineer specializing in Java, Spring Framework, Microservices and Cloud Technologies">
 
-    <!-- Styles and Icons -->
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/timeline.css">
-    <link rel="stylesheet" href="styles/responsive.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 
-
-    <!-- Scripts -->
-    <script src="scripts/main.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-    <header class="header">
-        <a href="#home" class="logo">V. Ruvesh</a>
-
-        <i class="bx bx-menu" id="menu-icon"></i>
-
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">My Skills</a>
-            <a href="#experience">My Experience</a>
-            <a href="#contact">Contact</a>
+    <!-- Header / Navigation -->
+    <header class="header" id="header">
+        <a href="#home" class="logo-avatar">
+            <img src="assets/images/logo.png" alt="Ruvesh">
+        </a>
+        <nav class="navbar" id="navbar">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </nav>
-
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
+            <i class="bx bx-menu"></i>
+        </button>
     </header>
 
-    <!-- home section -->
-    <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hi, my name is</h3>
-            <h1>Ruvesh</h1>
-            <h3>and I'm a&nbsp;&nbsp;<span id="chronicle"></span></h3>
-            <p>Experienced Software Engineer specializing in Java, Spring Boot, and Microservice Architecture with expertise in multiple relational and non-relational databases, Big Data Technologies and various Cloud Technologies.</p>
-            <div class="social-media">
-                <a href="https://www.linkedin.com/in/v-ruvesh/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/ruvesh" target="_blank"><i class='bx bxl-github'></i></a>
-                <a href="https://www.instagram.com/ruv.kmr/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+    <!-- Hero / Home Section -->
+    <section class="hero" id="home">
+        <div class="hero-content reveal">
+            <p class="hero-greeting">Hello, I'm</p>
+            <h1 class="hero-name">V. Ruvesh</h1>
+            <h2 class="hero-title">Senior Software Engineer</h2>
+            <p class="hero-description">Experienced Software Engineer specializing in Java, Spring Framework, and
+                Microservice Architecture with expertise in multiple relational and non-relational databases and various
+                Cloud Technologies.</p>
+            <div class="hero-social">
+                <a href="https://www.linkedin.com/in/v-ruvesh/" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/ruvesh" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
+                        class='bx bxl-github'></i></a>
+                <a href="https://www.instagram.com/ruv.kmr/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Instagram"><i class='bx bxl-instagram-alt'></i></a>
             </div>
-            <div class="btn-container">
-                <a href="#about" class="btn">Know Me</a>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                <a href="#about" class="btn btn-outline">Know More</a>
             </div>
         </div>
-        <div class="home-img">
-            <img src="assets/images/photo.png" alt="My Picture">
+        <div class="hero-visual reveal">
+            <div class="hero-image-wrapper">
+                <img src="assets/images/photo.png" alt="Ruvesh — Senior Software Engineer">
+            </div>
         </div>
     </section>
 
-    <!-- about section -->
+    <!-- About Section -->
     <section class="about" id="about">
-        <div class="about-img">
-            <img src="assets/images/photo.png" alt="About-picture">
+        <div class="section-header reveal">
+            <p class="section-tag">Get to know me</p>
+            <h2 class="section-title">About <span>Me</span></h2>
         </div>
-        <div class="about-content">
-            <h2 class="heading">About <span>Me</span></h2>
-            <h3>Software Engineer</h3>
-            <p>
-                I have over 3 years of experience successfully contributing to critical business projects and work
-                effectively as a team player. I thrive in challenging environments and enjoy solving real-world problems
-                for the betterment of society. With a strong motivation and a sense of purpose, I value teamwork and
-                collaborative efforts, but I am also capable of being an independent contributor when necessary.
-            </p>
-            <div class="btn-container">
-                <a href="assets/cv.pdf" download="v-ruvesh-cv.pdf" class="btn">Download CV</a>
+        <div class="about-grid">
+            <div class="about-image reveal">
+                <div class="about-image-wrapper">
+                    <img src="assets/images/photo-about.png" alt="About Ruvesh">
+                </div>
+            </div>
+            <div class="about-content reveal">
+                <h3 class="about-subtitle">Senior Software Engineer</h3>
+                <p>I have over 6 years of expertise successfully contributing to critical business projects and work
+                    effectively as a team player. I thrive in challenging environments and enjoy solving real-world
+                    problems for the betterment of society.</p>
+                <p>With a strong motivation and a sense of purpose, I value teamwork and collaborative efforts, but I am
+                    also capable of being an independent contributor when necessary.</p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">6+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Companies</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                </div>
+                <a href="assets/cv.pdf" download="v-ruvesh-cv.pdf" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-primary">
+                    <i class='bx bx-download'></i> Download CV
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- my-work section -->
+    <!-- Skills Section -->
     <section class="skills" id="skills">
-        <h2 class="heading">My <span>Skills</span></h2>
-        <div class="skills-container">
-            <div class="skills-box">
-                <i class='bx bxl-java'></i>
-                <i class='bx bxl-spring-boot'></i>
-                <i class='bx bxl-git'></i>
+        <div class="section-header reveal">
+            <p class="section-tag">What I bring to the table</p>
+            <h2 class="section-title">My <span>Skills</span></h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card reveal">
+                <div class="skill-icon-group">
+                    <i class='bx bxl-java'></i>
+                    <i class='bx bxl-spring-boot'></i>
+                    <i class='bx bxl-git'></i>
+                </div>
                 <h3>Backend Development</h3>
                 <p>With expertise in Java, Spring Boot, Spring Security, and microservices architecture, I am highly
                     experienced in creating highly performant and scalable backends. I am proficient in version control
-                    systems like Git and Perforce. I also have a strong skillset in ensuring high code quality through
-                    unit testing using tools like JUnit and Mockito, and code coverage analysis with Jacoco Maven
-                    Sure-fire. Additionally, I am skilled in using SonarQube to ensure code quality and maintainability,
-                    and am adept in using build tools like Maven to automate the build process.</p>
+                    systems like Git and Perforce, and ensure high code quality through unit testing with JUnit,
+                    Mockito, and Jacoco.</p>
+                <div class="skill-tags">
+                    <span>Java</span><span>Spring
+                        Boot</span><span>Microservices</span><span>JUnit</span><span>Maven</span><span>SonarQube</span>
+                </div>
             </div>
-            <div class="skills-box">
-                <i class='bx bx-server'></i>
-                <i class='bx bxl-postgresql'></i>
-                <i class='bx bxl-mongodb'></i>
+            <div class="skill-card reveal">
+                <div class="skill-icon-group">
+                    <i class='bx bx-server'></i>
+                    <i class='bx bxl-postgresql'></i>
+                    <i class='bx bxl-mongodb'></i>
+                </div>
                 <h3>Databases</h3>
-                <p>I have a strong background in working with a variety of relational databases including MySQL, Oracle,
-                    Postgres, and Redshift. Additionally, I have experience working with non-relational databases like
-                    MongoDB and Elastic Search, as well as cloud and realtime datastores offered by Firebase. I am
-                    skilled in designing, developing, and maintaining databases, and I excel at creating efficient
-                    queries and optimizing performance. I am also familiar with common database tools and frameworks
-                    like Hibernate, JPA, and JDBC.</p>
+                <p>I have a strong background in working with relational databases including MySQL, Oracle, Postgres,
+                    and Redshift, as well as non-relational databases like MongoDB and Elastic Search. I excel at
+                    designing efficient schemas, optimizing queries, and working with frameworks like Hibernate and JPA.
+                </p>
+                <div class="skill-tags">
+                    <span>MySQL</span><span>PostgreSQL</span><span>MongoDB</span><span>Redshift</span><span>Hibernate</span><span>Firebase</span>
+                </div>
             </div>
-            <div class="skills-box">
-                <i class='bx bxl-docker'></i>
-                <i class='bx bxl-kubernetes'></i>
-                <i class='bx bxl-aws'></i>
+            <div class="skill-card reveal">
+                <div class="skill-icon-group">
+                    <i class='bx bxl-docker'></i>
+                    <i class='bx bxl-kubernetes'></i>
+                    <i class='bx bxl-aws'></i>
+                </div>
                 <h3>Cloud Technologies</h3>
-                <p>I also have experience with cloud technologies including Docker and Kubernetes for containerization
-                    and orchestration, as well as AWS S3, EC2, and EKS for cloud storage and computing. I have worked
-                    with various cloud services from Firebase and GCP, and have deployed microservices in cloud
-                    environments. My understanding of cloud technologies allows me to design and implement scalable,
-                    distributed systems that can meet the needs of modern applications.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- my experience section -->
-    <section class="experience" id="experience">
-        <h2 class="heading">Professional <span>Timeline</span></h2>
-        <div class="experience-container">
-            <div class="timeline">
-                <div class="outer">
-                    <div class="card">
-                        <div class="info">
-                            <h2 class="org">Quinstreet, Inc</h2>
-                            <h3 class="title">Java Developer</h3>
-                            <h4 class="dates">Nov, 2022 - Present</h4>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="info">
-                            <h2 class="org">LTIMindtree</h2>
-                            <h3 class="title">Senior Product Engineer</h3>
-                            <h4 class="dates">May, 2020 - Nov, 2022</h4>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="info">
-                            <h2 class="org">Stepnstones Technologies</h2>
-                            <h3 class="title">Software Engineer</h3>
-                            <h4 class="dates">Aug, 2019 - Mar, 2020</h4>
-                        </div>
-                    </div>
+                <p>I have experience with Docker and Kubernetes for containerization and orchestration, as well as AWS
+                    S3, EC2, and EKS for cloud computing. I have worked with various cloud services from Firebase and
+                    GCP, and deployed microservices in cloud environments for scalable, distributed systems.</p>
+                <div class="skill-tags">
+                    <span>Docker</span><span>Kubernetes</span><span>AWS</span><span>GCP</span><span>Firebase</span><span>CI/CD</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- contact section -->
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="section-header reveal">
+            <p class="section-tag">My professional journey</p>
+            <h2 class="section-title">Work <span>Experience</span></h2>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Nov 2022 — Present</span>
+                    <h3>Senior Software Engineer</h3>
+                    <h4>Quinstreet, Inc</h4>
+                </div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">May 2020 — Nov 2022</span>
+                    <h3>Senior Product Engineer</h3>
+                    <h4>LTIMindtree</h4>
+                </div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Aug 2019 — Mar 2020</span>
+                    <h3>Software Engineer</h3>
+                    <h4>Stepnstones Technologies</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section class="contact" id="contact">
-        <h2 class="heading">Reach out to <span>Me</span></h2>
-        
-        <form action="https://formspree.io/f/mnqyrbbp" method="post">
-            <div class="input-box">
-                <input id="name" name="name" type="text" placeholder="Full Name" required onkeypress="return blockSpecialCharacters(event);">
-                <input name="email" type="email" placeholder="Email Address" required>
+        <div class="section-header reveal">
+            <p class="section-tag">Let's connect</p>
+            <h2 class="section-title">Get in <span>Touch</span></h2>
+        </div>
+        <form action="https://formspree.io/f/mnqyrbbp" method="post" class="contact-form reveal">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input id="name" name="name" type="text" placeholder="John Doe" required
+                        onkeypress="return blockSpecialCharacters(event);">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input id="email" name="email" type="email" placeholder="john@example.com" required>
+                </div>
             </div>
-            <div class="input-box">
-                <input id="phone" name="phone" type="tel" placeholder="Mobile (Optional)" maxlength="10" pattern="[0-9]{10}">
-                <input name="subject" type="text" placeholder="Subject" required>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Mobile (Optional)</label>
+                    <input id="phone" name="phone" type="tel" placeholder="1234567890" maxlength="10"
+                        pattern="[0-9]{10}">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input id="subject" name="subject" type="text" placeholder="How can I help?" required>
+                </div>
             </div>
-            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
-            <input class="btn" type="submit" value="Send Message">
+            <div class="form-group full-width">
+                <label for="message">Your Message</label>
+                <textarea name="message" id="message" rows="6" placeholder="Write your message here..."
+                    required></textarea>
+            </div>
+            <button class="btn btn-primary btn-submit" type="submit">
+                <i class='bx bx-send'></i> Send Message
+            </button>
         </form>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-text">
-            <p>Copyright &copy; V Ruvesh | All Rights Reserved</p>
+        <div class="footer-content">
+            <p>&copy; 2026 V Ruvesh. All Rights Reserved.</p>
         </div>
-        <div class="footer-icon-top"><a href="#home"><i class='bx bx-chevron-up'></i></a></div>
+        <a href="#home" class="back-to-top" aria-label="Back to top">
+            <i class='bx bx-chevron-up'></i>
+        </a>
     </footer>
 
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>
