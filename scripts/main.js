@@ -1,102 +1,101 @@
-window.onload = () => {
-    navLinks = document.querySelectorAll('header nav a');
-    sections = document.querySelectorAll('section');
-    menuIcon = document.querySelector('#menu-icon');
-    navBar = document.querySelector('.navbar');
-    nameInput = document.getElementById('name');
-    phoneInput = document.getElementById('phone');
+/**
+ * Portfolio main script
+ * - Mobile nav toggle
+ * - Scroll-based header styling & active nav highlighting
+ * - IntersectionObserver reveal animations
+ * - Contact form input validation helpers
+ */
 
-    // show or hide nav menu for small screen size on click of sandwich menu icon
-    menuIcon.addEventListener('click', () => {
-        menuIcon.classList.toggle('bx-x');
-        navBar.classList.toggle('drop-down');
+document.addEventListener('DOMContentLoaded', () => {
+    const header    = document.getElementById('header');
+    const navbar    = document.getElementById('navbar');
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks  = document.querySelectorAll('.nav-link');
+    const sections  = document.querySelectorAll('section');
+    const reveals   = document.querySelectorAll('.reveal');
+    const phoneInput = document.getElementById('phone');
+    const nameInput  = document.getElementById('name');
+
+    // ─── Mobile Nav Toggle ───────────────────────────────
+    navToggle.addEventListener('click', () => {
+        const isOpen = navbar.classList.toggle('open');
+        navToggle.querySelector('i').className = isOpen ? 'bx bx-x' : 'bx bx-menu';
     });
 
-    phoneInput.addEventListener('change', (event) => {
-        const input = event.target;
-        if (input.validity.patternMismatch) {
-            input.setCustomValidity("Please enter a valid 10 digit mobile number");
-        } else {
-            input.setCustomValidity("");
-        }
-    }, false);
+    // Close mobile nav when a link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navbar.classList.remove('open');
+            navToggle.querySelector('i').className = 'bx bx-menu';
+        });
+    });
 
-    nameInput.addEventListener('change', (event) => {
-        const input = event.target;
-        let inputVal = input.value.trim().replace(/\s\s+/g, ' ');
-        input.value.split('').forEach((ch) => {
-            if(!isAllowedChar(ch.charCodeAt(0))){
-                inputVal = inputVal.replace(ch, '');
+    // ─── Scroll: Header background ──────────────────────
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    // ─── Scroll: Active nav link highlighting ───────────
+    const activateNavLink = () => {
+        let current = '';
+        sections.forEach(section => {
+            const top     = section.offsetTop - 200;
+            const height  = section.offsetHeight;
+            if (window.scrollY >= top && window.scrollY < top + height) {
+                current = section.getAttribute('id');
             }
         });
 
-        input.value = inputVal;
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', activateNavLink, { passive: true });
+
+    // ─── IntersectionObserver: Reveal on Scroll ─────────
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
     });
 
-    addSiteAnimation();
-};
+    reveals.forEach(el => revealObserver.observe(el));
 
-// set active nav item based on currently scrolled section of site
-window.addEventListener('scroll', () => {
-    sections.forEach(section => {
-        let top = window.scrollY;
-        let offset = section.offsetTop - 150;
-        let height = section.offsetHeight;
-        let id = section.getAttribute('id');
-        
+    // ─── Form Validation ────────────────────────────────
+    if (phoneInput) {
+        phoneInput.addEventListener('change', (event) => {
+            const input = event.target;
+            input.setCustomValidity(
+                input.validity.patternMismatch
+                    ? 'Please enter a valid 10 digit mobile number'
+                    : ''
+            );
+        });
+    }
 
-        if(top >= offset && top < offset + height){
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
-            });
-        };
-    });
-
-    // close menu dropdown when scrolled or clicked on nav item
-    menuIcon.classList.remove('bx-x');
-    navBar.classList.remove('drop-down');
+    if (nameInput) {
+        nameInput.addEventListener('change', (event) => {
+            const input = event.target;
+            let val = input.value.trim().replace(/\s\s+/g, ' ');
+            input.value = val.split('').filter(ch => isAllowedChar(ch.charCodeAt(0))).join('');
+        });
+    }
 });
 
-const addSiteAnimation = () => {
-    performScrollAnimation();
-    animateChronicle();
-};
+// ─── Exported helpers (used by inline onkeypress) ───────
+const blockSpecialCharacters = (e) => isAllowedChar(e.key.charCodeAt(0));
 
-const performScrollAnimation = () => {
-    ScrollReveal({
-        reset: false,
-        distance: '80px',
-        duration: 2000,
-        delay: 100
-    });
-
-    ScrollReveal().reveal('.home-img, .skills-container, .timeline, .contact form textarea', { origin: 'bottom' });
-    ScrollReveal().reveal('.about-img, .home-content h1, .contact form input:nth-child(odd)', { origin: 'left' });
-    ScrollReveal().reveal('.about-content, .home-content p, .contact form input:nth-child(even)', { origin: 'right' });
-    ScrollReveal().reveal('.home-content, .heading, .contact form .btn', { origin: 'top' });
-};
-
-const animateChronicle = () => {
-    const typed = new Typed('#chronicle', {
-        strings: ['techie', 'programmer', 'solutionist'],
-        startDelay: 800,
-        typeSpeed: 100,
-        backSpeed: 50,
-        backDelay: 1000,
-        loop: true
-    });
-}
-
-const blockSpecialCharacters = (e) => {
-    let key = e.key;
-    let keyCharCode = key.charCodeAt(0);
-
-    return isAllowedChar(keyCharCode);
-}
-
-const isAllowedChar = (ch) => {
-    return (ch >= 65 && ch <= 90)
-        || (ch >= 97 && ch <= 122)
-        || ch == 32;
-}
+const isAllowedChar = (ch) =>
+    (ch >= 65 && ch <= 90)   ||   // A–Z
+    (ch >= 97 && ch <= 122)  ||   // a–z
+    ch === 32;                     // space
